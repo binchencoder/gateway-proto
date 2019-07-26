@@ -1,0 +1,27 @@
+syntax = "proto3";
+option go_package = "approval";
+
+package approval;
+
+option java_multiple_files = false;
+option java_outer_classname = "FormProto";
+option java_package = "ease.gateway.approval.proto";
+
+enum ComponentType {
+    UNKNOW = 0;
+    TEXT_FIELD = 1;
+    TEXTAREA_FIELD = 2;
+    NUMBER_FIELD = 3;
+    SELECT_FIELD = 4;
+    MULTI_SELECT_FIELD = 5;
+    DATE_FIELD = 6;
+    DATE_RANGE_FIELD = 7;
+    MONEY_FIELD = 8;
+    DEPARTMENT_FIELD = 9;
+    CALCULATE_FIELD = 10;
+}
+
+message TextField {
+    ComponentType component_type = 1;
+    
+}

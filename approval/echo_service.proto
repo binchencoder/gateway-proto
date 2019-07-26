@@ -1,11 +1,11 @@
 syntax = "proto3";
-option go_package = "proto";
+option go_package = "approval";
 
 // Echo Service
 //
 // Echo Service API consists of a single service which returns
 // a message.
-package ease.gateway.proto;
+package ease.gateway.approval.proto;
 
 import "google/api/annotations.proto";
 

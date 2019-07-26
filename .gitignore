@@ -7,5 +7,9 @@
 .classpath
 .settings
 
-**/bin/
-**/bazel-*/
+# Bazel.
+bazel-bin
+bazel-genfiles
+bazel-gateway-proto
+bazel-out
+bazel-testlogs

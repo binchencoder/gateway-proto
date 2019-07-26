@@ -5,7 +5,7 @@ load("@grpc_ecosystem_grpc_gateway//protoc-gen-swagger:defs.bzl", "protoc_gen_sw
 package(default_visibility = ["//visibility:public"])
 
 proto_library(
-    name = "approval_proto",
+    name = "proto_lib",
     srcs = glob(["*.proto"]),
     deps = [
         "@grpc_ecosystem_grpc_gateway//protoc-gen-swagger/options:options_proto",
@@ -19,13 +19,13 @@ proto_library(
 )
 
 go_proto_library(
-    name = "examplepb_go_proto",
+    name = "proto_go",
     compilers = [
         "@io_bazel_rules_go//proto:go_grpc",
         "@grpc_ecosystem_grpc_gateway//protoc-gen-grpc-gateway:go_gen_grpc_gateway",  # keep
     ],
     importpath = "github.com/binchencoder/gateway-proto/approval",
-    proto = ":approval_proto",
+    proto = ":proto_lib",
     deps = [
         "@grpc_ecosystem_grpc_gateway//protoc-gen-swagger/options:go_default_library",
         "@go_googleapis//google/api:annotations_go_proto",
@@ -34,7 +34,7 @@ go_proto_library(
 
 go_library(
     name = "go_default_library",
-    embed = [":examplepb_go_proto"],
+    embed = [":proto_go"],
     importpath = "github.com/binchencoder/gateway-proto/approval",
     deps = [
         "@grpc_ecosystem_grpc_gateway//runtime:go_default_library",
@@ -48,6 +48,6 @@ go_library(
 )
 
 protoc_gen_swagger(
-    name = "expamplepb_protoc_gen_swagger",
-    proto = ":approval_proto",
+    name = "proto_swagger",
+    proto = ":proto_lib",
 )

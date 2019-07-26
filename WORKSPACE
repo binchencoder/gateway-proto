@@ -7,19 +7,26 @@ http_archive(
     sha256 = "6776d68ebb897625dead17ae510eac3d5f6342367327875210df44dbe2aeeb19",
     urls = ["https://github.com/bazelbuild/rules_go/releases/download/0.17.1/rules_go-0.17.1.tar.gz"],
 )
+load("@io_bazel_rules_go//go:deps.bzl", "go_register_toolchains", "go_rules_dependencies")
+go_rules_dependencies()
+go_register_toolchains()
 
 http_archive(
     name = "bazel_gazelle",
     sha256 = "3c681998538231a2d24d0c07ed5a7658cb72bfb5fd4bf9911157c0e9ac6a2687",
     urls = ["https://github.com/bazelbuild/bazel-gazelle/releases/download/0.17.0/bazel-gazelle-0.17.0.tar.gz"],
 )
-
-load("@io_bazel_rules_go//go:deps.bzl", "go_register_toolchains", "go_rules_dependencies")
-go_rules_dependencies()
-go_register_toolchains()
-
 load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies", "go_repository")
 gazelle_dependencies()
+
+go_repository(
+    name = "rules_proto",
+    commit = "b0cc14be5da05168b01db282fe93bdf17aa2b9f4",
+    importpath = "github.com/bazelbuild/rules_proto",
+)
+load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies", "rules_proto_toolchains")
+rules_proto_dependencies()
+rules_proto_toolchains()
 
 go_repository(
     name = "binchencoder_third_party_java",
@@ -97,6 +104,5 @@ go_repository(
     importpath = "github.com/bazelbuild/buildtools",
     commit = "36bd730dfa67bff4998fe897ee4bbb529cc9fbee",
 )
-
 load("@com_github_bazelbuild_buildtools//buildifier:deps.bzl", "buildifier_dependencies")
 buildifier_dependencies()

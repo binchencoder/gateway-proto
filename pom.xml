@@ -16,6 +16,8 @@
 
 	<modules>
 		<module>approval</module>
+		<module>data</module>
+		<module>frontend</module>
 	</modules>
 
 	<properties>

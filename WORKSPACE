@@ -50,7 +50,15 @@ go_repository(
     ],
     strip_prefix = "net-16b79f2e4e95ea23b2bf9903c9809ff7b013ce85",
     type = "tar.gz",
-    # gazelle args: -go_prefix golang.org/x/net -proto disable
+)
+go_repository(
+    name = "org_golang_x_sys",
+    importpath = "golang.org/x/sys",
+    urls = [
+        "https://codeload.github.com/golang/sys/tar.gz/fde4db37ae7ad8191b03d30d27f258b5291ae4e3", 
+    ],
+    strip_prefix = "sys-fde4db37ae7ad8191b03d30d27f258b5291ae4e3",
+    type = "tar.gz",
 )
 go_repository(
     name = "org_golang_x_text",
@@ -60,7 +68,6 @@ go_repository(
     ],
     strip_prefix = "text-f21a4dfb5e38f5895301dc265a8def02365cc3d0",
     type = "tar.gz",
-    # gazelle args: -go_prefix golang.org/x/text -proto disable
 )
 go_repository(
     name = "org_golang_x_tools",

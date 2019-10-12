@@ -26,6 +26,7 @@ enum ServiceId {
     VEXILLARY_SERVICE       = 11;
     EASE_GATEWAY           = 12;
     CUSTOM_GATEWAY         = 13;
+    SKYLB_FRONTEND         = 14; // SkyLB managment UI.
 
     //### 2700-2709 Approval services.
     APPROVAL_GRPC_SERVICE = 2700;

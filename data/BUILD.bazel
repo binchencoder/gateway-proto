@@ -12,14 +12,14 @@ proto_library(
 
 go_proto_library(
     name = "data_go_proto",
-    importpath = "github.com/binchencoder/gateway-proto/proto/data",
+    importpath = "binchencoder.com/gateway-proto/data",
     proto = ":data_proto",
 )
 
 go_library(
     name = "go_default_library",
     embed = [":data_go_proto"],
-    importpath = "github.com/binchencoder/gateway-proto/proto/data",
+    importpath = "binchencoder.com/gateway-proto/data",
 )
 
 java_proto_library(

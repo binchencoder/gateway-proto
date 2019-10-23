@@ -6,9 +6,14 @@
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
 
+    <organization>
+        <name>Binchencoder</name>
+        <url>https://www.github.com/binchencoder</url>
+    </organization>
+
 	<!-- parent -->
 	<parent>
-		<groupId>com.binchencoder.gateway.proto</groupId>
+		<groupId>com.binchencoder.gateway</groupId>
 		<artifactId>gateway-proto</artifactId>
 		<version>1.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
@@ -44,10 +49,10 @@
 				<groupId>org.xolstice.maven.plugins</groupId>
 				<artifactId>protobuf-maven-plugin</artifactId>
 				<configuration>
-					<protoSourceRoot>../../../</protoSourceRoot>
+					<protoSourceRoot>../../</protoSourceRoot>
 					<includes>
-						<param>ease-gateway/proto/data/*.proto</param>
-						<param>ease-gateway/proto/data/*/*.proto</param>
+						<param>gateway-proto/data/*.proto</param>
+						<param>gateway-proto/data/*/*.proto</param>
 					</includes>
 				</configuration>
 				<executions>

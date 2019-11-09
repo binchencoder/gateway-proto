@@ -29,7 +29,7 @@ sub parse {
         my $line = $_;
         if ($line =~ /^\s*(\S+)\s*=\s*(\d+).*;.*$/) {
             if (length($locstr) > 0) {
-				$result[$index][0] = $1;
+				$result[$index][0] = $2;
 				$result[$index][1] = trim($locstr);
 				$locstr = "";
 				$index++;
@@ -102,8 +102,3 @@ generateLocFile("en.loc", @h1);
 #generateLocVariables("var.js", @h1);
 
 print "Done\n";
-
-
-
-
-

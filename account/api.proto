@@ -1,0 +1,62 @@
+syntax = "proto3";
+option go_package = "proto";
+
+option java_package = "com.binchencoder.protos.account";
+option java_outer_classname = "AccountProto";
+
+package account;
+
+import "httpoptions/annotations.proto";
+
+// User's gender.
+enum Gender {
+  // Male gender.
+  MALE = 0;
+  // Female gender.
+  FEMALE = 1;
+}
+
+// A user's details.
+message User {
+  // The user's identity ID.
+  int64 id = 1;
+  // The user's login name.
+  string login_name = 2;
+  // The user's login password.
+  string password = 3;
+  // The user's full name.
+  string full_name = 4;
+  // The user's gender.
+  Gender gender = 5;
+  // The user's mobile phone number.
+  string mobile = 6;
+  // The user's email.
+  string email = 7;
+}
+
+// Creates a user request.
+message CreateUserRequest { User user = 1; }
+
+// Creates a user response.
+message CreateUserResponse { int64 id = 1; }
+
+// Gets a user by id request.
+message GetUserRequest { int64 id = 1; }
+
+// Gets a user by id response.
+message GetUserResponse { User user = 1; }
+
+// The account service handles requests and responses related to account data.
+service AccountService {
+  option (ease.api.service_spec) = {
+    service_id : ACCOUNT_SERVICE
+    port_name : "grpc"
+    namespace : "default"
+  };
+
+  // CreateUser method receives a user message, inserts to db and returns id.
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+
+  // GetUser method receives a user id and returns user.
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+}

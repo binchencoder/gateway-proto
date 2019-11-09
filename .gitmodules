@@ -1,15 +1,13 @@
 [submodule "third_party/protobuf"]
 	path = third_party/protobuf
 	url = https://github.com/protocolbuffers/protobuf.git
-
+	branch=v3.8.0
 [submodule "third_party/ease-gateway"]
 	path = third_party/ease-gateway
 	url = https://github.com/binchencoder/ease-gateway.git
-
 [submodule "third_party/letsgo"]
 	path = third_party/letsgo
 	url = https://github.com/binchencoder/letsgo.git
-
 [submodule "third_party/skylb-api"]
 	path = third_party/skylb-api
 	url = https://github.com/binchencoder/skylb-api.git

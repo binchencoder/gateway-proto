@@ -32,6 +32,9 @@ enum ServiceId {
     APPROVAL_GRPC_SERVICE = 2700;
     APPROVAL_SCHEDULE_SERVICE = 2701;
 
+    //### 2800-2819 Account system services.
+    ACCOUNT_SERVICE = 2801;
+
     //### Test services begins from 2147470000.
     SHARED_TEST_CLIENT_SERVICE  = 2147470000; // public test client service.
     SHARED_TEST_SERVER_SERVICE  = 2147470001; // public test server service.

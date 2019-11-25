@@ -11,9 +11,20 @@
 		<name>Binchencoder</name>
 		<url>https://www.github.com/binchencoder</url>
 	</organization>
+	<repositories>
+		<repository>
+			<id>mvn-repo</id>
+			<url>https://raw.github.com/binchencoder/mvn-repo/master</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
 
 	<modules>
 		<!-- <module>approval</module> -->
+		<module>account</module>
 		<module>data</module>
 		<module>frontend</module>
 	</modules>

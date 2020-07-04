@@ -2,6 +2,19 @@ load("@bazel_gazelle//:deps.bzl", "go_repository")
 
 def go_repositories():
     go_repository(
+        name = "com_github_binchencoder_letsgo",
+        importpath = "github.com/binchencoder/letsgo",
+        sum = "h1:VKiaQOatUCmm0qZcM2y6w/3jPS6I3NmysgsVb4olpEM=",
+        version = "v0.0.0-20200704091533-eaa763a25eeb",
+    )
+    go_repository(
+        name = "com_github_binchencoder_skylb_api",
+        importpath = "github.com/binchencoder/skylb-api",
+        sum = "h1:3YYqYc03ZjKeerOiJQ2I7UCCT3UUt5PWXBCS+9bNKjY=",
+        version = "v0.0.0-20200704091931-21e57cb72921",
+    )
+
+    go_repository(
         name = "com_github_grpc_ecosystem_grpc_gateway",
         importpath = "github.com/grpc-ecosystem/grpc-gateway",
         sum = "h1:zCy2xE9ablevUOrUZc3Dl72Dt+ya2FNAvC2yLYMHzi4=",
@@ -88,8 +101,14 @@ def go_repositories():
     go_repository(
         name = "org_golang_google_grpc",
         importpath = "google.golang.org/grpc",
-        sum = "h1:M5a8xTlYTxwMn5ZFkwhRabsygDY5G8TYLyQDBxJNAxE=",
-        version = "v1.30.0",
+        sum = "h1:zvIju4sqAGvwKspUQOhwnpcqSbzi7/H6QomNNjTL4sk=",
+        version = "v1.27.1",
+    )
+    go_repository(
+        name = "org_uber_go_atomic",
+        importpath = "go.uber.org/atomic",
+        sum = "h1:Ezj3JGmsOnG1MoRWQkPBsKLe9DwWD9QeXzTRzzldNVk=",
+        version = "v1.6.0",
     )
     go_repository(
         name = "in_gopkg_yaml_v2",

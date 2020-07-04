@@ -50,9 +50,11 @@ go_repositories()
 #     shallow_since = "1558721209 -0700",
 # )
 
-local_repository(
+go_repository(
     name = "com_google_protobuf",
-    path = "third_party/protobuf",
+    importpath = "github.com/protocolbuffers/protobuf",
+    sum = "h1:QqbYMyZnsw7sFse1zxZY4E1uPAOcwPBHmG6fcdAEq+U=",
+    version = "v3.12.3+incompatible",
 )
 
 load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
@@ -102,15 +104,15 @@ go_repository(
 # ---------- local repositories
 local_repository(
     name = "com_github_binchencoder_ease_gateway",
-    path = "third_party/ease-gateway",
+    path = "../ease-gateway",
 )
 
-local_repository(
-    name = "com_github_binchencoder_letsgo",
-    path = "third_party/letsgo",
-)
+# local_repository(
+#     name = "com_github_binchencoder_letsgo",
+#     path = "../letsgo",
+# )
 
-local_repository(
-    name = "com_github_binchencoder_skylb_api",
-    path = "third_party/skylb-api",
-)
+# local_repository(
+#     name = "com_github_binchencoder_skylb_api",
+#     path = "../skylb-api",
+# )

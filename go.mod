@@ -4,7 +4,7 @@ go 1.13
 
 require (
 	github.com/VividCortex/gohistogram v1.0.0
-	github.com/binchencoder/letsgo v0.0.0-20200704091533-eaa763a25eeb
+	github.com/binchencoder/letsgo v0.0.0-20200704112152-304bb8b58b21
 	github.com/binchencoder/skylb-api v0.0.0-20200704091931-21e57cb72921
 	github.com/cenkalti/backoff v2.2.1+incompatible
 	github.com/ghodss/yaml v1.0.0

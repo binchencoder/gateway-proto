@@ -24,9 +24,10 @@ go_proto_library(
         "@io_bazel_rules_go//proto:go_grpc",
         "@com_github_grpc_ecosystem_grpc_gateway//protoc-gen-grpc-gateway:go_gen_grpc_gateway",  # keep
     ],
-    importpath = "binchencoder.com/gateway-proto/approval",
+    importpath = "github.com/binchencoder/gateway-proto/approval",
     proto = ":proto_lib",
     deps = [
+        "@com_github_golang_protobuf//descriptor:go_default_library",
         "@com_github_grpc_ecosystem_grpc_gateway//protoc-gen-swagger/options:go_default_library",
         "@go_googleapis//google/api:annotations_go_proto",
     ],
@@ -35,7 +36,7 @@ go_proto_library(
 go_library(
     name = "go_default_library",
     embed = [":proto_go"],
-    importpath = "binchencoder.com/gateway-proto/approval",
+    importpath = "github.com/binchencoder/gateway-proto/approval",
     deps = [
         "@com_github_golang_protobuf//proto:go_default_library",
         "@com_github_grpc_ecosystem_grpc_gateway//runtime:go_default_library",

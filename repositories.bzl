@@ -4,14 +4,14 @@ def go_repositories():
     go_repository(
         name = "com_github_binchencoder_letsgo",
         importpath = "github.com/binchencoder/letsgo",
-        sum = "h1:TogXrqAuQgeUKJjoiFcZDfIfivRrRwcFrLcQTU+SyVw=",
-        version = "v0.0.0-20200704112152-304bb8b58b21",
+        sum = "h1:TJt33qi4WOB85ZlWqrbyB41WG29HiJobyksvdI/vGrc=",
+        version = "v0.0.2",
     )
     go_repository(
         name = "com_github_binchencoder_skylb_api",
         importpath = "github.com/binchencoder/skylb-api",
-        sum = "h1:3YYqYc03ZjKeerOiJQ2I7UCCT3UUt5PWXBCS+9bNKjY=",
-        version = "v0.0.0-20200704091931-21e57cb72921",
+        sum = "h1:cxReYMR7QZ9biF6W5JDWTyd15JqWbcAp8Py1/poj410=",
+        version = "v0.0.1",
     )
 
     go_repository(

@@ -102,10 +102,10 @@ go_repository(
 )
 
 # ---------- local repositories
-local_repository(
-    name = "com_github_binchencoder_ease_gateway",
-    path = "../ease-gateway",
-)
+# local_repository(
+#     name = "com_github_binchencoder_ease_gateway",
+#     path = "../ease-gateway",
+# )
 
 # local_repository(
 #     name = "com_github_binchencoder_letsgo",

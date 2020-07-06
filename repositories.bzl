@@ -2,19 +2,6 @@ load("@bazel_gazelle//:deps.bzl", "go_repository")
 
 def go_repositories():
     go_repository(
-        name = "com_github_binchencoder_letsgo",
-        importpath = "github.com/binchencoder/letsgo",
-        sum = "h1:hEDDOeGdX9R/JPYMdVo9N/9iQa5BeBLluTssrNYy/ng=",
-        version = "v0.0.3",
-    )
-    go_repository(
-        name = "com_github_binchencoder_skylb_api",
-        importpath = "github.com/binchencoder/skylb-api",
-        sum = "h1:NnlPmEjTgOjH+s9TK3rBEY4Kn9aEzZkuEBUV2aR8UTM=",
-        version = "v0.0.3",
-    )
-
-    go_repository(
         name = "com_github_grpc_ecosystem_grpc_gateway",
         importpath = "github.com/grpc-ecosystem/grpc-gateway",
         sum = "h1:zCy2xE9ablevUOrUZc3Dl72Dt+ya2FNAvC2yLYMHzi4=",

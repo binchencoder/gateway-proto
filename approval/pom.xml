@@ -17,6 +17,15 @@
 
     <dependencies>
         <dependency>
+			<groupId>com.binchencoder.gateway</groupId>
+			<artifactId>data-proto</artifactId>
+		</dependency>
+         <dependency>
+            <groupId>com.binchencoder.easegw</groupId>
+            <artifactId>easegw-options-protos</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-protobuf</artifactId>
         </dependency>
@@ -33,7 +42,6 @@
             <groupId>com.google.api.grpc</groupId>
             <artifactId>googleapis-common-protos</artifactId>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -46,10 +54,10 @@
             <groupId>org.xolstice.maven.plugins</groupId>
             <artifactId>protobuf-maven-plugin</artifactId>
             <configuration>
-            <protoSourceRoot>../../</protoSourceRoot>
+            <protoSourceRoot>../</protoSourceRoot>
             <includes>
-                <param>gateway-proto/approval/*.proto</param>
-                <param>gateway-proto/approval/*/*.proto</param>
+                <param>approval/*.proto</param>
+                <param>approval/*/*.proto</param>
             </includes>
             </configuration>
             <executions>

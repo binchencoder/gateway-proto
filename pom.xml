@@ -42,6 +42,19 @@
 
 	<dependencyManagement>
 		<dependencies>
+            <dependency>
+                <groupId>com.binchencoder.gateway</groupId>
+                <artifactId>data-proto</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.binchencoder.easegw</groupId>
+                <artifactId>easegw-options-protos</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <scope>provided</scope>
+            </dependency>
+
 			<dependency>
 				<groupId>io.grpc</groupId>
 				<artifactId>grpc-protobuf</artifactId>
@@ -141,10 +154,10 @@
 					<protocArtifact>com.google.protobuf:protoc:${protobuf.version}:exe:${os.detected.classifier}</protocArtifact>
 					<pluginId>grpc-java</pluginId>
 					<pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}</pluginArtifact>
-					<protoSourceRoot>../../</protoSourceRoot>
+					<protoSourceRoot>../</protoSourceRoot>
 					<includes>
-						<param>gateway-proto/*/*.proto</param>
-						<param>gateway-proto/*/*/*.proto</param>
+						<param>*/*.proto</param>
+						<param>*/*/*.proto</param>
 					</includes>
 				</configuration>
 				<executions>

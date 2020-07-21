@@ -61,10 +61,10 @@
 				<groupId>org.xolstice.maven.plugins</groupId>
 				<artifactId>protobuf-maven-plugin</artifactId>
 				<configuration>
-					<protoSourceRoot>../../</protoSourceRoot>
+					<protoSourceRoot>../</protoSourceRoot>
 					<includes>
-						<param>gateway-proto/frontend/*.proto</param>
-						<param>gateway-proto/frontend/*/*.proto</param>
+						<param>frontend/*.proto</param>
+						<param>frontend/*/*.proto</param>
 					</includes>
 				</configuration>
 				<executions>

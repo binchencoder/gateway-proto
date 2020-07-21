@@ -49,10 +49,10 @@
 				<groupId>org.xolstice.maven.plugins</groupId>
 				<artifactId>protobuf-maven-plugin</artifactId>
 				<configuration>
-					<protoSourceRoot>../../</protoSourceRoot>
+					<protoSourceRoot>../</protoSourceRoot>
 					<includes>
-						<param>gateway-proto/data/*.proto</param>
-						<param>gateway-proto/data/*/*.proto</param>
+						<param>data/*.proto</param>
+						<param>data/*/*.proto</param>
 					</includes>
 				</configuration>
 				<executions>

@@ -1,12 +1,12 @@
 syntax = "proto3";
-option go_package = "frontend";
 
+option go_package = "github.com/binchencoder/gateway-proto/frontend;error";
 option java_package = "com.binchencoder.grpc.errors";
 option java_outer_classname = "Errors";
 
 ///### Package frontend defines common messages for frontend errors (including
 ///### WEB, Android, iOS, Windows, and MacOS Apps).
-package frontend;
+package binchencoder.protobuf.frontend;
 
 ///### Enum for all error codes.
 ///### Localization Guide for error codes. Error code which requires Localization

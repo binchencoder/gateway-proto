@@ -1,10 +1,10 @@
 syntax = "proto3";
-option go_package = "data";
 
+option go_package = "github.com/binchencoder/gateway-proto/data";
 option java_package = "com.binchencoder.grpc.data";
 option java_outer_classname = "DataProtos";
 
-package data;
+package binchencoder.protobuf.data;
 
 // The unique service ID. Please sort in alphanumeric order.
 //

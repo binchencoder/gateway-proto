@@ -6,7 +6,7 @@ option java_outer_classname = "AccountProto";
 
 package account;
 
-import "httpoptions/annotations.proto";
+import "ease/api/annotations.proto";
 
 // User's gender.
 enum Gender {

@@ -24,7 +24,7 @@ enum ServiceId {
 
     //### 11 - 99: Infrastructure services
     VEXILLARY_SERVICE       = 11;
-    EASE_GATEWAY           = 12;
+    JANUS_GATEWAY           = 12;
     CUSTOM_GATEWAY         = 13;
     SKYLB_FRONTEND         = 14; // SkyLB managment UI.
 
@@ -39,7 +39,7 @@ enum ServiceId {
     SHARED_TEST_CLIENT_SERVICE  = 2147470000; // public test client service.
     SHARED_TEST_SERVER_SERVICE  = 2147470001; // public test server service.
 
-    CUSTOM_EASE_GATEWAY_TEST = 2147470006; // public custom ease-gateway service.
+    CUSTOM_JANUS_GATEWAY_TEST = 2147470006; // public custom janus-gateway service.
 
     ///### for config server default settings.
     _ = 2147483647; // math.MaxInt32

@@ -49,8 +49,8 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.binchencoder.easegw</groupId>
-                <artifactId>easegw-options-protos</artifactId>
+                <groupId>com.binchencoder.gateway</groupId>
+                <artifactId>janus-options-protos</artifactId>
                 <version>1.0-SNAPSHOT</version>
                 <scope>provided</scope>
             </dependency>

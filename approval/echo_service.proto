@@ -5,7 +5,7 @@ option go_package = "approval";
 //
 // Echo Service API consists of a single service which returns
 // a message.
-package ease.gateway.approval.proto;
+package janus.gateway.approval.proto;
 
 import "google/api/annotations.proto";
 

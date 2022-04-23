@@ -21,8 +21,8 @@
 			<artifactId>data-proto</artifactId>
 		</dependency>
          <dependency>
-            <groupId>com.binchencoder.easegw</groupId>
-            <artifactId>easegw-options-protos</artifactId>
+            <groupId>com.binchencoder.gateway</groupId>
+            <artifactId>janus-options-protos</artifactId>
         </dependency>
 
         <dependency>

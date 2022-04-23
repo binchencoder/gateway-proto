@@ -6,7 +6,7 @@ option java_outer_classname = "AccountProto";
 
 package account;
 
-import "ease/api/annotations.proto";
+import "janus/api/annotations.proto";
 
 // User's gender.
 enum Gender {
@@ -48,7 +48,7 @@ message GetUserResponse { User user = 1; }
 
 // The account service handles requests and responses related to account data.
 service AccountService {
-  option (ease.api.service_spec) = {
+  option (janus.api.service_spec) = {
     service_id : ACCOUNT_SERVICE
     port_name : "grpc"
     namespace : "default"

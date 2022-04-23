@@ -251,8 +251,8 @@ func (*SimpleMessage) XXX_OneofWrappers() []interface{} {
 }
 
 func init() {
-	proto.RegisterType((*Embedded)(nil), "ease.gateway.approval.proto.Embedded")
-	proto.RegisterType((*SimpleMessage)(nil), "ease.gateway.approval.proto.SimpleMessage")
+	proto.RegisterType((*Embedded)(nil), "janus.gateway.approval.proto.Embedded")
+	proto.RegisterType((*SimpleMessage)(nil), "janus.gateway.approval.proto.SimpleMessage")
 }
 
 func init() { proto.RegisterFile("approval/echo_service.proto", fileDescriptor_323eb0b4a36dcb11) }
@@ -317,7 +317,7 @@ func NewEchoServiceClient(cc *grpc.ClientConn) EchoServiceClient {
 
 func (c *echoServiceClient) Echo(ctx context.Context, in *SimpleMessage, opts ...grpc.CallOption) (*SimpleMessage, error) {
 	out := new(SimpleMessage)
-	err := c.cc.Invoke(ctx, "/ease.gateway.approval.proto.EchoService/Echo", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/janus.gateway.approval.proto.EchoService/Echo", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -326,7 +326,7 @@ func (c *echoServiceClient) Echo(ctx context.Context, in *SimpleMessage, opts ..
 
 func (c *echoServiceClient) EchoBody(ctx context.Context, in *SimpleMessage, opts ...grpc.CallOption) (*SimpleMessage, error) {
 	out := new(SimpleMessage)
-	err := c.cc.Invoke(ctx, "/ease.gateway.approval.proto.EchoService/EchoBody", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/janus.gateway.approval.proto.EchoService/EchoBody", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -335,7 +335,7 @@ func (c *echoServiceClient) EchoBody(ctx context.Context, in *SimpleMessage, opt
 
 func (c *echoServiceClient) EchoDelete(ctx context.Context, in *SimpleMessage, opts ...grpc.CallOption) (*SimpleMessage, error) {
 	out := new(SimpleMessage)
-	err := c.cc.Invoke(ctx, "/ease.gateway.approval.proto.EchoService/EchoDelete", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/janus.gateway.approval.proto.EchoService/EchoDelete", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -363,7 +363,7 @@ func _EchoService_Echo_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/ease.gateway.approval.proto.EchoService/Echo",
+		FullMethod: "/janus.gateway.approval.proto.EchoService/Echo",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(EchoServiceServer).Echo(ctx, req.(*SimpleMessage))
@@ -381,7 +381,7 @@ func _EchoService_EchoBody_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/ease.gateway.approval.proto.EchoService/EchoBody",
+		FullMethod: "/janus.gateway.approval.proto.EchoService/EchoBody",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(EchoServiceServer).EchoBody(ctx, req.(*SimpleMessage))
@@ -399,7 +399,7 @@ func _EchoService_EchoDelete_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/ease.gateway.approval.proto.EchoService/EchoDelete",
+		FullMethod: "/janus.gateway.approval.proto.EchoService/EchoDelete",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(EchoServiceServer).EchoDelete(ctx, req.(*SimpleMessage))
@@ -408,7 +408,7 @@ func _EchoService_EchoDelete_Handler(srv interface{}, ctx context.Context, dec f
 }
 
 var _EchoService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "ease.gateway.approval.proto.EchoService",
+	ServiceName: "janus.gateway.approval.proto.EchoService",
 	HandlerType: (*EchoServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

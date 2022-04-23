@@ -1,6 +1,6 @@
 load("@io_bazel_rules_go//go:def.bzl", "go_library")
 load("@io_bazel_rules_go//proto:def.bzl", "go_proto_library")
-# load("@com_github_binchencoder_ease_gateway//gateway/protoc-gen-swagger:defs.bzl", "protoc_gen_swagger")
+# load("@com_github_binchencoder_janus_gateway//gateway/protoc-gen-swagger:defs.bzl", "protoc_gen_swagger")
 
 # package(default_visibility = ["//visibility:public"])
 
@@ -12,7 +12,7 @@ load("@io_bazel_rules_go//proto:def.bzl", "go_proto_library")
 #     deps = [
 #         "//data:data_proto",
 #         "//frontend:error_proto",
-#         "@com_github_binchencoder_ease_gateway//httpoptions:options_proto",
+#         "@com_github_binchencoder_janus_gateway//httpoptions:options_proto",
 #         "@go_googleapis//google/api:annotations_proto",
 #     ],
 # )
@@ -21,13 +21,13 @@ load("@io_bazel_rules_go//proto:def.bzl", "go_proto_library")
 #     name = "accountpb_go_proto",
 #     compilers = [
 #         "@io_bazel_rules_go//proto:go_grpc",
-#         "@com_github_binchencoder_ease_gateway//gateway/protoc-gen-grpc-gateway:go_gen_grpc_gateway",  # keep
+#         "@com_github_binchencoder_janus_gateway//gateway/protoc-gen-grpc-gateway:go_gen_grpc_gateway",  # keep
 #     ],
 #     importpath = "github.com/binchencoder/gateway-proto/account",
 #     proto = ":accountpb_proto",
 #     deps = [
-#         "@com_github_binchencoder_ease_gateway//gateway/runtime:go_default_library",
-#         "@com_github_binchencoder_ease_gateway//httpoptions:go_default_library",
+#         "@com_github_binchencoder_janus_gateway//gateway/runtime:go_default_library",
+#         "@com_github_binchencoder_janus_gateway//httpoptions:go_default_library",
 #         "@org_golang_google_grpc//naming:go_default_library",
 #     ],
 # )
@@ -39,8 +39,8 @@ load("@io_bazel_rules_go//proto:def.bzl", "go_proto_library")
 #     deps = [
 #         "//data:go_default_library",
 #         "//frontend:go_default_library",
-#         "@com_github_binchencoder_ease_gateway//gateway/runtime:go_default_library",
-#         "@com_github_binchencoder_ease_gateway//httpoptions:go_default_library",
+#         "@com_github_binchencoder_janus_gateway//gateway/runtime:go_default_library",
+#         "@com_github_binchencoder_janus_gateway//httpoptions:go_default_library",
 #     ],
 # )
 

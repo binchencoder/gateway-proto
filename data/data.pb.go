@@ -44,7 +44,7 @@ const (
 	ServiceId_SERVICE_NONE ServiceId = 0
 	//### 11 - 99: Infrastructure services
 	ServiceId_VEXILLARY_SERVICE ServiceId = 11
-	ServiceId_EASE_GATEWAY      ServiceId = 12
+	ServiceId_JANUS_GATEWAY      ServiceId = 12
 	ServiceId_CUSTOM_GATEWAY    ServiceId = 13
 	ServiceId_SKYLB_FRONTEND    ServiceId = 14 // SkyLB managment UI.
 	//### 2700-2709 Approval services.
@@ -55,7 +55,7 @@ const (
 	//### Test services begins from 2147470000.
 	ServiceId_SHARED_TEST_CLIENT_SERVICE ServiceId = 2147470000 // public test client service.
 	ServiceId_SHARED_TEST_SERVER_SERVICE ServiceId = 2147470001 // public test server service.
-	ServiceId_CUSTOM_EASE_GATEWAY_TEST   ServiceId = 2147470006 // public custom ease-gateway service.
+	ServiceId_CUSTOM_JANUS_GATEWAY_TEST   ServiceId = 2147470006 // public custom janus-gateway service.
 	///### for config server default settings.
 	ServiceId__ ServiceId = 2147483647 // math.MaxInt32
 )
@@ -65,7 +65,7 @@ var (
 	ServiceId_name = map[int32]string{
 		0:          "SERVICE_NONE",
 		11:         "VEXILLARY_SERVICE",
-		12:         "EASE_GATEWAY",
+		12:         "JANUS_GATEWAY",
 		13:         "CUSTOM_GATEWAY",
 		14:         "SKYLB_FRONTEND",
 		2700:       "APPROVAL_GRPC_SERVICE",
@@ -73,13 +73,13 @@ var (
 		2801:       "ACCOUNT_SERVICE",
 		2147470000: "SHARED_TEST_CLIENT_SERVICE",
 		2147470001: "SHARED_TEST_SERVER_SERVICE",
-		2147470006: "CUSTOM_EASE_GATEWAY_TEST",
+		2147470006: "CUSTOM_JANUS_GATEWAY_TEST",
 		2147483647: "_",
 	}
 	ServiceId_value = map[string]int32{
 		"SERVICE_NONE":               0,
 		"VEXILLARY_SERVICE":          11,
-		"EASE_GATEWAY":               12,
+		"JANUS_GATEWAY":               12,
 		"CUSTOM_GATEWAY":             13,
 		"SKYLB_FRONTEND":             14,
 		"APPROVAL_GRPC_SERVICE":      2700,
@@ -87,7 +87,7 @@ var (
 		"ACCOUNT_SERVICE":            2801,
 		"SHARED_TEST_CLIENT_SERVICE": 2147470000,
 		"SHARED_TEST_SERVER_SERVICE": 2147470001,
-		"CUSTOM_EASE_GATEWAY_TEST":   2147470006,
+		"CUSTOM_JANUS_GATEWAY_TEST":   2147470006,
 		"_":                          2147483647,
 	}
 )

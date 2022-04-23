@@ -5,7 +5,7 @@ package approval;
 
 option java_multiple_files = false;
 option java_outer_classname = "FormProto";
-option java_package = "ease.gateway.approval.proto";
+option java_package = "janus.gateway.approval.proto";
 
 enum ComponentType {
     UNKNOW = 0;
